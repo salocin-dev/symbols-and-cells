@@ -1,1 +1,31 @@
-main.css
+:root{
+	--green: #4eeb25;
+	--between: #00c362;
+	--blue:  #089972;
+	--black: #2a2c2b;
+}
+body{
+	background-color: var(--black);
+	display: grid;
+	place-items: center;
+}
+.textBox{
+	color: var(--between);
+	background-color: var(--black);
+	padding: 2rem;
+	border: 5px outset var(--between);
+	justify-content: center;
+}
+.gradientBorder{
+	max-width: 610px;
+  	padding: 1rem;
+  	position: relative;
+  	background: linear-gradient(to right, var(--green), var(--blue));
+  	padding: 3px;
+  	display: flex;
+  	justify-content: center;
+}
+#tablero{
+	border: 5px outset var(--between);
+	justify-content: center;
+}

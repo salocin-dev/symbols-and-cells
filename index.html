@@ -6,7 +6,17 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<script type="text/javascript" src="main.js"></script>
 </head>
-<body>
-
+<body onload='init();'>
+	<div class="gradientBorder">
+		<div class="textBox">
+			<h1>Juego de la vida</h1>
+			<h4>Autómata celular diseñado por el matemático John Conway</h4>
+			<ul> <h4>Reglas:</h4>
+				<li>Una célula muerta con exactamente 3 células vecinas vivas "nace" (es decir, en la siguiente generación estará viva).</li><br>
+				<li>Una célula viva con 2 o 3 células vecinas vivas continua en viva, en cualquier otro caso muere (por soledad o superpoblación).</li>
+			</ul>
+		</div>
+	</div>
+	<div class="gradientBorder"><canvas id="tablero"></canvas></div>
 </body>
 </html>
