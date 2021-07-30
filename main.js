@@ -1,6 +1,6 @@
 var canvas;
 var ctx;
-var fps = 10;
+var fps = 1;
 var canvasX = 600;
 var canvasY = 400;
 var tileX, tileY;
@@ -12,6 +12,22 @@ var columnas = 100;
 var green = '#4eeb25';
 var blue = '#089972';
 
+function tablaArray(fil, col) {
+	var obj = new Array(fil);
+	for (y=0; y<fil; y++){
+		obj[y]= new Array(col);
+	}
+	return obj; 
+}
+
+var cell = function (x,y,estado) {
+	this.x = x;
+	this.y = y;
+	this.estado; //vivo = 1 muerto = 2
+	this.estadoProx = this.estado; // estado de la sigiente generacion
+	this.vecinos = []; //
+}
+
 function init() {
 	canvas = document.getElementById('tablero');
 	ctx = canvas.getContext('2D');
@@ -22,9 +38,17 @@ function init() {
 	tileX = Math.floor(canvasX/filas);
 	tileY = Math.floor(canvasY/columnas);
 
-	setInterval(function() {
-		gen();},1000/fps);
+	tablero = tablaArray(filas, columnas);
+
+	setInterval(function(){gen();},1000/fps);
+}
+
+function clearCanvas() {
+	canvas.width = canvas.width;
+	canvas.height = canvas.height;
 }
 
 function gen() {
+	console.log('gen');
+	clearCanvas();
 }
